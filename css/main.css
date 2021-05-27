@@ -79,6 +79,47 @@ section {
 }
 
 
+/*Module rules*/
+.navbar__menu {
+	/*position: fixed;*/
+	padding: 1rem;
+	border-bottom: 1px solid #f63;
+}
+.navbar__menu ul {
+    padding-left: 0;
+    margin: 0;
+    text-align: right;
+}
+
+.navbar__menu li {
+    display: inline-block;
+}
+
+.navbar__menu .menu__link {
+    display: block;
+    padding: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #f63;
+}
+
+.navbar__menu .menu__link:hover {
+    background: #333;
+    color: #fff;
+    transition: ease 0.3s all;
+}
+
+.menu__link--active {
+    background-color: #f63;
+    color: white;
+}
+
+
+
+
+
+
+
 /*Thematic lay*/
 .landing__container {
 	padding: 1rem;
