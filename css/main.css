@@ -92,10 +92,20 @@ section {
 	min-height: 80vh;
 }
 
+/* Layout page header */
+.page__header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: #fff;
+	z-index: 5;
+}
+
 
 /*Module rules*/
 .navbar__menu {
-	/*position: fixed;*/
+	position: fixed;
+	top: 0;
 	padding: 1rem;
 	border-bottom: 1px solid #f63;
 	min-height: 8vh;
