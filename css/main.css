@@ -110,6 +110,10 @@ section {
 	padding: 1rem;
 	border-bottom: 1px solid #f63;
 	min-height: 8vh;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
 }
 .navbar__menu ul {
     padding-left: 0;
