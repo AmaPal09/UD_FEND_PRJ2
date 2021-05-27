@@ -1,13 +1,55 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Roboto:wght@100;300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Roboto:wght@300;600&display=swap');
 
-*{
+* {
 	margin: 0;
 	padding: 0;
-	font-size: 16px;
 	text-align: center;
-	font-weight: "regular";
+	font-family: "Roboto", sans-serif;
+	font-size: 16px;
+	font-weight: 300;
 	line-height: 1.6;
+
 }
 
 
+/*dancing script 400, 700*/
+/*roboto: 100; 300; 500*/
+
+h1 {
+	margin: 3rem;
+	font-family: "Dancing Script", cursive;
+	font-weight: 700;
+	font-size: 3rem;
+
+}
+
+h2 {
+	margin: 1rem;
+	/*font-family: "Roboto", sans-serif;*/
+	font-weight: 600;
+	font-style: italic;
+	/*font-weight: bolder;*/
+	font-size: 1.5rem;
+}
+
+p {
+	padding-bottom: 1rem;
+	/*font-family: "Roboto", sans-serif;*/
+	/*font-size: 300;*/
+}
+
+.main__hero__desc {
+	padding-bottom: 1rem;
+	font-family: "Dancing Script", cursive;
+	font-weight: 400;
+	font-style: italic;
+	font-size: 1.5rem;
+}
+
+.copyright-statement {
+	padding: 1rem;
+	/*font-family: "Roboto", sans-serif;*/
+	font-size: 0.8rem;
+	font-weight: 300;
+}
 
