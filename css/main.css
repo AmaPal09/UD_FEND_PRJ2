@@ -84,7 +84,8 @@ main {
 
 .main__hero {
 	min-height: 50vh;
-	padding: 2rem;
+	padding: 3rem;
+	margin-top: 10rem;
 }
 
 section {
@@ -104,8 +105,8 @@ section {
 
 /*Module rules*/
 .navbar__menu {
-	position: fixed;
-	top: 0;
+	/*position: fixed;*/
+	/*top: 0;*/
 	padding: 1rem;
 	border-bottom: 1px solid #f63;
 	min-height: 8vh;
