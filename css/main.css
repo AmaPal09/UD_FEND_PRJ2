@@ -84,6 +84,7 @@ section {
 	/*position: fixed;*/
 	padding: 1rem;
 	border-bottom: 1px solid #f63;
+	min-height: 8vh;
 }
 .navbar__menu ul {
     padding-left: 0;
@@ -114,7 +115,11 @@ section {
     color: white;
 }
 
-
+.navbar__logo {
+	/*object-fit: contain;*/
+	height: 100%
+	width: auto;
+}
 
 
 
