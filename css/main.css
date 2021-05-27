@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Roboto:wght@300;600&display=swap');
 
+/*Basic rules*/
 * {
 	margin: 0;
 	padding: 0;
-	text-align: center;
+	/*text-align: center;*/
 	font-family: "Roboto", sans-serif;
 	font-size: 16px;
 	font-weight: 300;
@@ -12,19 +13,23 @@
 }
 
 
+/*Typography*/
 /*dancing script 400, 700*/
 /*roboto: 100; 300; 500*/
 
+/*Typography main body*/
 h1 {
 	margin: 3rem;
 	font-family: "Dancing Script", cursive;
 	font-weight: 700;
 	font-size: 3rem;
+	text-align: center;
 
 }
 
 h2 {
-	margin: 1rem;
+	margin: 1rem 0 1rem;
+	border-bottom: 1px solid black;
 	/*font-family: "Roboto", sans-serif;*/
 	font-weight: 600;
 	font-style: italic;
@@ -44,8 +49,10 @@ p {
 	font-weight: 400;
 	font-style: italic;
 	font-size: 1.5rem;
+	text-align: center;
 }
 
+/*Typography footer*/
 .copyright-statement {
 	padding: 1rem;
 	/*font-family: "Roboto", sans-serif;*/
@@ -53,3 +60,37 @@ p {
 	font-weight: 300;
 }
 
+
+/*Layout details*/
+/*Layout main body*/
+main {
+	/*top | horizontal | bottom*/
+	margin: 10vh 1rem 10vh;
+}
+
+.main__hero {
+	min-height: 40vh;
+	padding: 10rem 0 0 0;
+}
+
+section {
+	position: relative;
+	min-height: 80vh;
+}
+
+
+/*Thematic lay*/
+.landing__container {
+	padding: 1rem;
+}
+
+section:nth-of-type(odd) .landing__container {
+	text-align: left;
+	margin-right: 2rem;
+
+}
+
+section:nth-of-type(even) .landing__container {
+	text-align: right;
+	margin-left: 2rem:
+}
