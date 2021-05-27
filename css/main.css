@@ -54,7 +54,7 @@ p {
 
 /*Typography footer*/
 .copyright-statement {
-	padding: 1rem;
+	/*padding: 1rem;*/
 	/*font-family: "Roboto", sans-serif;*/
 	font-size: 0.8rem;
 	font-weight: 300;
@@ -122,7 +122,10 @@ section {
 }
 
 
-
+.section__landing__img {
+	width: 100%;
+	height: auto;
+}
 
 
 /*Thematic lay*/
