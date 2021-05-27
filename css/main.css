@@ -139,9 +139,13 @@ section {
     transition: ease 0.3s all;
 }
 
-.menu__link--active {
+/*.navbar__menu .menu__link .menu__link--active {
     background-color: #f63;
     color: white;
+}*/
+
+.menu__link--active {
+	background-color: #ddd
 }
 
 .navbar__logo {
@@ -156,6 +160,9 @@ section {
 	height: auto;
 }
 
+.section--active {
+	background-color: #ddd;
+}
 
 /*Thematic lay*/
 .landing__container {

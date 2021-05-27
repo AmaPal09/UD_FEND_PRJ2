@@ -31,12 +31,49 @@ const navbarParent = document.querySelector('#navbar__list');
  * Start Helper Functions
  *
 */
+//Get the section corresponding to the input menu item
 function getCorrespondingSection(menu) {
 	const sectionId = menu.getAttribute('href').substring(1);
+	console.log(`getCorrespondingSection called for ${sectionId}`);
 	return document.getElementById(sectionId);
-}
+};
 
 
+// Get the menu item corresponding to the input section
+function getCorrespondingMenu(section) {
+	// get all menu items to cross check which one correspnds to section
+	const menuLinksList = document.querySelectorAll('.menu__link');
+
+	for(const menu of menuLinksList) {
+		menuHref = menu.getAttribute('href').substring(1);
+		if (menuHref == section.id) {
+			return menu;
+		}
+	};
+
+	return undefined;
+};
+
+
+
+// fuction  to check if element is in viewport
+function isInViewport(elem) {
+	console.log(`isInViewport called for ${elem.id}`);
+	var bounding = elem.getBoundingClientRect();
+	// return (bounding.top + 100 >=0 &&
+	// 		bounding.left + 100 >= 0 &&
+	// 		bounding.bottom <= (window.innerHeight ||
+	// 							document.documentElement.clientHight) &&
+	// 		bounding.right <= (window.innerWidth ||
+	// 							document.documentElement.clientWidth)
+	// 		);
+	return (
+		bounding.top >=0 &&
+		bounding.left >= 0 &&
+		bounding.right <= (window.innerWidth || document.documentElement.clientWidth) &&
+		bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+		);
+};
 /**
  * End Helper Functions
  * Begin Main Functions
@@ -71,7 +108,7 @@ function addNavItems() {
 	//add the navigation fragment to the navigation parent
 	navbarParent.appendChild(navFragment);
 
-}
+};
 
 
 /**
@@ -98,12 +135,40 @@ function navToSectionScroll() {
 			menuCorrSect.scrollIntoView({behavior: "smooth"});
 		});
 	});
-}
+};
 
 
 // function to add scroll event listener to highlight corresponding menu item
+function activeSection() {
+	console.log("Active sections called");
 
-// function
+	// add scroll event listener
+	window.addEventListener('scroll', () => {
+		console.log("scroll event");
+
+		// check which section is active
+		sectionsList.forEach((section) => {
+			//get menuItem correspoding to this section
+			const menuItem = getCorrespondingMenu(section);
+
+			// execute if the section is in viewport
+			if(isInViewport(section)) {
+				console.log(`section ${section.id} is in viewport`);
+
+				// add active classes to the navigation menu item
+				menuItem.classList.add('menu__link--active');
+				// add active classes to the section
+				section.classList.add('section--active');
+			}
+			else {
+				// as section is not active remove active classes from navigation menu item and section
+				menuItem.classList.remove('menu__link--active');
+				section.classList.remove('section--active');
+   			}
+		});
+	});
+
+};
 
 
 
@@ -114,3 +179,4 @@ addNavItems();
 navToSectionScroll();
 
 // Set sections as active
+activeSection();
