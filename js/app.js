@@ -31,7 +31,10 @@ const navbarParent = document.querySelector('#navbar__list');
  * Start Helper Functions
  *
 */
-
+function getCorrespondingSection(menu) {
+	const sectionId = menu.getAttribute('href').substring(1);
+	return document.getElementById(sectionId);
+}
 
 
 /**
@@ -41,6 +44,7 @@ const navbarParent = document.querySelector('#navbar__list');
 */
 
 function addNavItems() {
+	console.log("addNavItems started")
 	const navFragment = document.createDocumentFragment();
 
 	// create a navbar menu item for each section in the index
@@ -76,9 +80,37 @@ function addNavItems() {
  *
 */
 
+//function for click events listener to scroll to section
+function navToSectionScroll() {
+	// get all menu list items
+	const menuLinksList = document.querySelectorAll('.menu__link');
+
+	// add the events on each menu item
+	menuLinksList.forEach((menu) => {
+		// get the section to which the menu points
+		const menuCorrSect = getCorrespondingSection(menu);
+		// add click event listener
+		menu.addEventListener('click', (event) => {
+			// stop from jumping to the section
+			event.preventDefault();
+			console.log(`click event on ${menu.innerText}`);
+			// scroll smoothly to the section
+			menuCorrSect.scrollIntoView({behavior: "smooth"});
+		});
+	});
+}
+
+
+// function to add scroll event listener to highlight corresponding menu item
+
+// function
+
+
+
 // Build menu
 addNavItems();
 
 // Scroll to section on link click
+navToSectionScroll();
 
 // Set sections as active
