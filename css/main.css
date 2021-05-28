@@ -43,6 +43,11 @@ p {
 	/*font-size: 300;*/
 }
 
+footer {
+	padding: 1rem;
+
+}
+
 .main__hero__desc {
 	padding-bottom: 1rem;
 	font-family: "Dancing Script", cursive;
