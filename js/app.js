@@ -68,8 +68,8 @@ function isInViewport(elem) {
 	// 							document.documentElement.clientWidth)
 	// 		);
 	return (
-		bounding.top >=0 &&
-		bounding.left >= 0 &&
+		bounding.top +150 >=0 &&
+		bounding.left +150 >= 0 &&
 		bounding.right <= (window.innerWidth || document.documentElement.clientWidth) &&
 		bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight)
 		);
