@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Roboto:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Roboto:wght@300;500;700&display=swap');
 
 /*Basic rules*/
 * {
@@ -28,10 +28,11 @@ h1 {
 }
 
 h2 {
-	margin: 1rem 0 1rem;
+	margin: 1rem;
+	padding: 1rem;
 	border-bottom: 1px solid black;
 	/*font-family: "Roboto", sans-serif;*/
-	font-weight: 600;
+	font-weight: 500;
 	font-style: italic;
 	/*font-weight: bolder;*/
 	font-size: 1.5rem;
@@ -133,7 +134,8 @@ section {
 .navbar__menu .menu__link {
     display: block;
     padding: 1rem;
-    font-weight: bold;
+    font-size: 1.5rem;
+    font-weight: 700;
     text-decoration: none;
     color: #f63;
 }
