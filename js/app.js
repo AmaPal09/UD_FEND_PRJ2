@@ -24,6 +24,7 @@ console.log("File is attached");
 // Get all the sections in the main body
 const sectionsList = document.querySelectorAll('section');
 
+//get parent element where the menu list will be added
 const navbarParent = document.querySelector('#navbar__list');
 
 /**
