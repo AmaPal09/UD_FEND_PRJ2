@@ -1,4 +1,8 @@
+/*Link to import Google fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Roboto:wght@300;500;700&display=swap');
+
+/*Import hamburger icon from font aweson*/
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 
 /*Basic rules*/
 * {
@@ -143,6 +147,7 @@ section {
 	align-items: center;
 	justify-content: space-between;
 }
+
 .navbar__menu ul {
     padding-left: 0;
     margin: 0;
@@ -172,6 +177,12 @@ section {
     background-color: #f63;
     color: white;
 }*/
+
+
+.hamburger {
+	font-size: 1.5rem;
+	color: #f63;
+}
 
 .menu__link--active {
 	background-color: #eee
