@@ -182,6 +182,8 @@ section {
 .hamburger {
 	font-size: 1.5rem;
 	color: #f63;
+	display: none;
+	cursor: pointer;
 }
 
 .menu__link--active {
@@ -226,4 +228,53 @@ section:nth-of-type(odd) .landing__container {
 section:nth-of-type(even) .landing__container {
 	text-align: right;
 	margin-left: 2rem:
+}
+
+
+
+
+/*Responsive layout for navbar
+
+small = max-width:(iphoneX 375px)
+medium = max-width: (ipad = 768px)
+large = max-width(1200px)
+
+*/
+
+@media screen and (max-width: 768px){
+	body {
+		overflow-x: hidden;
+	}
+
+	/*#navbar__list {*/
+	.navbar__menu__list {
+		position: fixed;
+		right: 0px;
+		top: 8vh;
+		height: 92vh;
+		/*width: 100%;*/
+		width: 50%;
+		background-color: #fff;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		transform: translateX(100%);
+		transition: transform 0.5s ease-in;
+	}
+	.navbar__menu .menu__link {
+		color: #f63;
+		font-size: 2rem;
+		/*opacity: 0;*/
+
+	}
+
+	.hamburger {
+		display: block;
+		font-size: 2rem;
+	}
+
+	.navbar__list--active {
+		transform: translateX(0%);
+	}
 }

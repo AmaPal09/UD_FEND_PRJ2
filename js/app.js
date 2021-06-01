@@ -212,6 +212,20 @@ function clickToTopButton() {
 	});
 };
 
+
+//hamburger menu on when screen size is small/medium
+function burgerMenu() {
+	const burger = document.querySelector('.hamburger');
+
+	//add click event to display navbar menu
+	burger.addEventListener('click', () => {
+		navbarParent.classList.toggle('navbar__list--active');
+	});
+
+};
+
+burgerMenu();
+
 // Build menu
 addNavItems();
 
