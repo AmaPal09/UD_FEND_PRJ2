@@ -152,7 +152,7 @@ section {
 }*/
 
 .menu__link--active {
-	background-color: #ddd
+	background-color: #eee
 }
 
 .navbar__logo {
@@ -169,7 +169,7 @@ section {
 }
 
 .section--active {
-	background-color: #ddd;
+	background-color: #eee;
 }
 
 /*Thematic lay*/
