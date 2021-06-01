@@ -112,6 +112,21 @@ function addNavItems() {
 };
 
 
+// Function that will create a floating to jump to top button
+function createToTopButton() {
+	const topButton = document.createElement('button');
+	topButton.id = 'toTopBtn';
+	topButton.title = 'Go to top of webpage';
+	topButton.innerText = 'Top';
+	topButton.classList.add('btn-scrollTop')
+
+	//add button to the webpage
+	document.body.appendChild(topButton);
+
+};
+
+
+
 /**
  * End Main Functions
  * Begin Events
@@ -172,9 +187,42 @@ function activeSection() {
 };
 
 
+// function to add events that will display to top button
+function displayToTopButton() {
+	console.log("Hello World");
+	const toTopBtn = document.getElementById('toTopBtn');
+	window.addEventListener('scroll', () => {
+		console.log("adding scroll event");
+		if(document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+			toTopBtn.style.display = "block";
+		} else {
+			toTopBtn.style.display = "none";
+		}
+	});
+
+};
+
+
+//function to add event listener that will jump to top when clicked on button
+function clickToTopButton() {
+	const toTopBtn = document.getElementById('toTopBtn');
+	toTopBtn.addEventListener('click', (event) => {
+		document.body.scrollTop = 0; //For safari
+		document.documentElement.scrollTop = 0; //For chrome, firefox, ie, opera, etc.
+	});
+};
 
 // Build menu
 addNavItems();
+
+// Create jump to top button
+createToTopButton();
+
+// Add scroll event to display jump to top button
+displayToTopButton();
+
+//Add click event toTopButton
+clickToTopButton();
 
 // Scroll to section on link click
 navToSectionScroll();

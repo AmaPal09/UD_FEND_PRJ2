@@ -72,6 +72,28 @@ footer {
 	background-color: #f63;
 }
 
+.btn-scrollTop {
+	display: none;
+	position: fixed;
+    bottom: 2.5rem;
+    right: 2rem;
+    padding: 1rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+    border-radius: 10%;
+    border: none;
+    outline: none;
+    background-color: #f63;
+    color: white;
+    cursor: pointer;
+    z-index: 99;
+}
+
+.btn-scrollTop:hover{
+	background-color: #555;
+}
+
+
 /*Typography footer*/
 .copyright-statement {
 	/*padding: 1rem;*/
