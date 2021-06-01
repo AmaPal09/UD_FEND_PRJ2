@@ -221,15 +221,19 @@ section {
 
 section:nth-of-type(odd) .landing__container {
 	text-align: left;
-	margin-right: 2rem;
+	/*margin-right: 2rem;*/
 
 }
 
 section:nth-of-type(even) .landing__container {
 	text-align: right;
-	margin-left: 2rem:
+	/*margin-left: 2rem:*/
 }
 
+section:nth-of-type(even) .landing__container
+.landing__info__container {
+	order: 2;
+}
 
 
 
