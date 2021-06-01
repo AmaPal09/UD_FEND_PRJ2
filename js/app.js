@@ -59,7 +59,7 @@ function getCorrespondingMenu(section) {
 // fuction  to check if element is in viewport
 function isInViewport(elem) {
 	console.log(`isInViewport called for ${elem.id}`);
-	var bounding = elem.getBoundingClientRect();
+	let bounding = elem.getBoundingClientRect();
 	// return (bounding.top + 100 >=0 &&
 	// 		bounding.left + 100 >= 0 &&
 	// 		bounding.bottom <= (window.innerHeight ||
