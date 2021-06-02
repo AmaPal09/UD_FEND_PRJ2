@@ -17,6 +17,7 @@
 }
 
 
+/********************************/
 /*Typography*/
 /*dancing script 400, 700*/
 /*roboto: 100; 300; 500*/
@@ -31,28 +32,6 @@ h1 {
 
 }
 
-h2 {
-	margin: 1rem;
-	padding: 1rem;
-	border-bottom: 1px solid black;
-	/*font-family: "Roboto", sans-serif;*/
-	font-weight: 500;
-	font-style: italic;
-	/*font-weight: bolder;*/
-	font-size: 1.5rem;
-}
-
-p {
-	padding-bottom: 1rem;
-	/*font-family: "Roboto", sans-serif;*/
-	/*font-size: 300;*/
-}
-
-footer {
-	padding: 1rem;
-
-}
-
 .main__hero__desc {
 	padding-bottom: 1rem;
 	font-family: "Dancing Script", cursive;
@@ -62,18 +41,40 @@ footer {
 	text-align: center;
 }
 
+h2 {
+	margin: 1rem;
+	padding: 1rem;
+	border-bottom: 1px solid black;
+	font-weight: 500;
+	font-style: italic;
+	font-size: 1.5rem;
+}
+
+p {
+	padding-bottom: 1rem;
+}
+
+/*Typography footer*/
+footer {
+	padding: 1rem;
+}
+
+.copyright-statement {
+	font-size: 0.8rem;
+	font-weight: 300;
+}
+
+/*Typography of other features*/
 .btn {
 	color: #fff;
-	/*padding: 0.7rem;*/
+	background-color: #f63;
+	font-size: 1.3rem;
+	font-weight: 500;
 	padding: 1rem;
 	margin: 1rem;
 	border: none;
 	border-radius: 5%;
 	outline: none;
-	background-color: #f63;
-	font-size: 1.3rem;
-	font-weight: 500;
-
 }
 
 .btn--order {
@@ -85,15 +86,8 @@ footer {
 	position: fixed;
     bottom: 2.5rem;
     right: 2rem;
-    /*padding: 1rem;*/
-    /*font-size: 1.3rem;*/
-    /*font-weight: 500;*/
-    /*border-radius: 10%;*/
     border: none;
     outline: none;
-    /*background-color: #f63;*/
-    /*color: white;*/
-    /*cursor: pointer;*/
     z-index: 99;
 }
 
@@ -102,16 +96,9 @@ footer {
 }
 
 
-/*Typography footer*/
-.copyright-statement {
-	/*padding: 1rem;*/
-	/*font-family: "Roboto", sans-serif;*/
-	font-size: 0.8rem;
-	font-weight: 300;
-}
-
-
+/********************************/
 /*Layout details*/
+
 /*Layout main body*/
 main {
 	/*top | horizontal | bottom*/
@@ -141,8 +128,6 @@ section {
 
 /*Module rules*/
 .navbar__menu {
-	/*position: fixed;*/
-	/*top: 0;*/
 	padding: 1rem;
 	border-bottom: 1px solid #f63;
 	min-height: 8vh;
@@ -182,7 +167,6 @@ section {
     color: white;
 }*/
 
-
 .hamburger {
 	font-size: 1.5rem;
 	color: #f63;
@@ -195,15 +179,11 @@ section {
 }
 
 .navbar__logo {
-	/*object-fit: contain;*/
 	height: 100%
 	width: auto;
 }
 
-
 .section__landing__img {
-	/*width: 100%;*/
-	/*width: 35vw;*/
 	width: 400px;
 	height: auto;
 }
@@ -214,7 +194,6 @@ section {
 
 /*Thematic lay*/
 .landing__container {
-	/*padding: 1rem;*/
 	padding: 3rem 1rem 1rem 1rem;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -222,19 +201,14 @@ section {
 	justify-content: center;
 	justify-items: center;
     align-items: center;
-    /*grid-column-start: reverse;*/
 }
-
 
 section:nth-of-type(odd) .landing__container {
 	text-align: left;
-	/*margin-right: 2rem;*/
-
 }
 
 section:nth-of-type(even) .landing__container {
 	text-align: right;
-	/*margin-left: 2rem:*/
 }
 
 section:nth-of-type(even) .landing__container
@@ -244,7 +218,7 @@ section:nth-of-type(even) .landing__container
 
 
 
-/*Responsive layout for navbar
+/*Responsive layout
 
 
 .landing container is not grid
