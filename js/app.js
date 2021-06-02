@@ -13,14 +13,13 @@
  *
 */
 
-
 console.log("File is attached");
-
 
 /**
  * Define Global Variables
  *
 */
+
 // Get all the sections in the main body
 const sectionsList = document.querySelectorAll('section');
 
@@ -32,6 +31,7 @@ const navbarParent = document.querySelector('#navbar__list');
  * Start Helper Functions
  *
 */
+
 //Get the section corresponding to the input menu item
 function getCorrespondingSection(menu) {
 	const sectionId = menu.getAttribute('href').substring(1);
@@ -61,13 +61,6 @@ function getCorrespondingMenu(section) {
 function isInViewport(elem) {
 	console.log(`isInViewport called for ${elem.id}`);
 	let bounding = elem.getBoundingClientRect();
-	// return (bounding.top + 100 >=0 &&
-	// 		bounding.left + 100 >= 0 &&
-	// 		bounding.bottom <= (window.innerHeight ||
-	// 							document.documentElement.clientHight) &&
-	// 		bounding.right <= (window.innerWidth ||
-	// 							document.documentElement.clientWidth)
-	// 		);
 	return (
 		bounding.top +150 >=0 &&
 		bounding.left +150 >= 0 &&
@@ -75,12 +68,15 @@ function isInViewport(elem) {
 		bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight)
 		);
 };
+
+
 /**
  * End Helper Functions
  * Begin Main Functions
  *
 */
 
+// Function to create navigation menu list
 function addNavItems() {
 	console.log("addNavItems started")
 	const navFragment = document.createDocumentFragment();
@@ -114,10 +110,13 @@ function addNavItems() {
 
 // Function that will create a floating to jump to top button
 function createToTopButton() {
+	//create new buttom element
 	const topButton = document.createElement('button');
+	// add attributes to the button
 	topButton.id = 'toTopBtn';
 	topButton.title = 'Go to top of webpage';
 	topButton.innerText = 'Top';
+	// add classes
 	topButton.classList.add('btn');
 	topButton.classList.add('btn-scrollTop');
 
@@ -125,7 +124,6 @@ function createToTopButton() {
 	document.body.appendChild(topButton);
 
 };
-
 
 
 /**
@@ -184,14 +182,15 @@ function activeSection() {
    			}
 		});
 	});
-
 };
 
 
 // function to add events that will display to top button
 function displayToTopButton() {
 	console.log("Hello World");
+	// get the button element
 	const toTopBtn = document.getElementById('toTopBtn');
+	// add event listener to display button when scrolling
 	window.addEventListener('scroll', () => {
 		console.log("adding scroll event");
 		if(document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
@@ -200,13 +199,14 @@ function displayToTopButton() {
 			toTopBtn.style.display = "none";
 		}
 	});
-
 };
 
 
 //function to add event listener that will jump to top when clicked on button
 function clickToTopButton() {
+	// get the button element
 	const toTopBtn = document.getElementById('toTopBtn');
+	// add event listener to check when button is clicked
 	toTopBtn.addEventListener('click', (event) => {
 		document.body.scrollTop = 0; //For safari
 		document.documentElement.scrollTop = 0; //For chrome, firefox, ie, opera, etc.
@@ -222,10 +222,10 @@ function burgerMenu() {
 	burger.addEventListener('click', () => {
 		navbarParent.classList.toggle('navbar__list--active');
 	});
-
 };
 
-burgerMenu();
+
+/*Call functions*/
 
 // Build menu
 addNavItems();
@@ -244,3 +244,6 @@ navToSectionScroll();
 
 // Set sections as active
 activeSection();
+
+// burger menu toggle function
+burgerMenu();
