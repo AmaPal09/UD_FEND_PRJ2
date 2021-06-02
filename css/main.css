@@ -64,16 +64,20 @@ footer {
 
 .btn {
 	color: #fff;
-	padding: 0.7rem;
+	/*padding: 0.7rem;*/
+	padding: 1rem;
 	margin: 1rem;
 	border: none;
-	border-radius: 1px;
-
+	border-radius: 5%;
+	outline: none;
+	background-color: #f63;
+	font-size: 1.3rem;
+	font-weight: 500;
 
 }
 
 .btn--order {
-	background-color: #f63;
+	/*background-color: #f63;*/
 }
 
 .btn-scrollTop {
@@ -81,15 +85,15 @@ footer {
 	position: fixed;
     bottom: 2.5rem;
     right: 2rem;
-    padding: 1rem;
-    font-size: 1.3rem;
-    font-weight: 500;
-    border-radius: 10%;
+    /*padding: 1rem;*/
+    /*font-size: 1.3rem;*/
+    /*font-weight: 500;*/
+    /*border-radius: 10%;*/
     border: none;
     outline: none;
-    background-color: #f63;
-    color: white;
-    cursor: pointer;
+    /*background-color: #f63;*/
+    /*color: white;*/
+    /*cursor: pointer;*/
     z-index: 99;
 }
 
@@ -199,7 +203,8 @@ section {
 
 .section__landing__img {
 	/*width: 100%;*/
-	width: 35vw;
+	/*width: 35vw;*/
+	width: 400px;
 	height: auto;
 }
 
@@ -209,14 +214,15 @@ section {
 
 /*Thematic lay*/
 .landing__container {
-	padding: 1rem;
+	/*padding: 1rem;*/
+	padding: 3rem 1rem 1rem 1rem;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-gap: 20px;
-	/*justify-content: center;*/
+	justify-content: center;
 	justify-items: center;
     align-items: center;
-    grid-column-start: reverse;
+    /*grid-column-start: reverse;*/
 }
 
 
@@ -240,15 +246,37 @@ section:nth-of-type(even) .landing__container
 
 /*Responsive layout for navbar
 
-small = max-width:(iphoneX 375px)
-medium = max-width: (ipad = 768px)
-large = max-width(1200px)
+
+.landing container is not grid
+section img 300px
+small = under max-width:(iphoneX 375px)
+
+.landing__container is not grid
+section img 400px
+medium = under max-width: (ipad = 768px)
+
+.landing container is grid
+section img 400px
+large = under max-width(1200px)
+
+xl = over min-width(1200px)
+	section img 500px
 
 */
 
+/*Changes for medium size screen*/
 @media screen and (max-width: 768px){
+	* {
+		font-size: 16px;
+		line-height: 1.6;
+	}
+
 	body {
 		overflow-x: hidden;
+	}
+
+	figure{
+		padding: 1rem 0 0 0;
 	}
 
 	/*#navbar__list {*/
@@ -267,19 +295,87 @@ large = max-width(1200px)
 		transform: translateX(100%);
 		transition: transform 0.5s ease-in;
 	}
+
 	.navbar__menu .menu__link {
 		color: #f63;
 		font-size: 2rem;
 		/*opacity: 0;*/
-
 	}
 
 	.hamburger {
 		display: block;
 		font-size: 2rem;
+		z-index: 99;
 	}
 
 	.navbar__list--active {
 		transform: translateX(0%);
+	}
+
+	.landing__container {
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: center;
+	}
+
+	.landing__info__container {
+		padding: 3rem 0 2rem 0;
+	}
+
+	.section__landing__img {
+		width: 400px
+	}
+
+	section:nth-of-type(even) .landing__container {
+		text-align: left;
+	}
+
+	section:nth-of-type(even) .landing__container
+		.landing__info__container {
+		order: 0;
+	}
+}
+
+
+/*Changes for medium size screen*/
+@media screen and (max-width: 376px){
+	* {
+		font-size: 14px;
+		line-height: 1.4;
+	}
+
+	.navbar__menu {
+		height: 8vh;
+	}
+
+	.section__landing__img {
+		width: 300px;
+	}
+
+
+
+}
+
+
+
+
+/*Changes for xl */
+@media screen and (min-width: 1200px) {
+	*{
+		font-size: 20px;
+		line-height: 2;
+	}
+
+	.landing__container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 20px;
+		justify-items: center;
+		align-items: center;
+
+	}
+
+	.section__landing__img {
+		width: 500px;
 	}
 }

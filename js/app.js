@@ -118,7 +118,8 @@ function createToTopButton() {
 	topButton.id = 'toTopBtn';
 	topButton.title = 'Go to top of webpage';
 	topButton.innerText = 'Top';
-	topButton.classList.add('btn-scrollTop')
+	topButton.classList.add('btn');
+	topButton.classList.add('btn-scrollTop');
 
 	//add button to the webpage
 	document.body.appendChild(topButton);
