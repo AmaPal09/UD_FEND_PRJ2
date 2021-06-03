@@ -228,24 +228,25 @@ function burgerMenu() {
 
 
 // function to make section collapsible
-function collapseSection() {
-	console.log("collapseSection called");
-	const collapse1 = document.querySelector('.collapsible');
-	collapse1.addEventListener('click', () => {
-		console.log("click event on collapsible");
-		collapse1.classList.toggle('collapsible--active');
-		collapse1.classList.toggle('collaps--passive');
+// function collapseSection() {
+console.log("collapseSection called");
+const collapse1 = document.querySelector('.collapsible');
+collapse1.addEventListener('click', () => {
+	console.log("click event on collapsible");
+	collapse1.classList.toggle('collapsible--active');
+	collapse1.classList.toggle('collaps--passive');
 
-		// const content = collapse1.nextElementSibling;
-		// if (content.style.maxHeight) {
-		// 	content.style.maxHeight = null;
-		// } else {
-		// 	content.style.maxHeight = content.scrollHeight + "px";
-		// }
-	});
-}
+	const content = collapse1.nextElementSibling;
+	console.log(`display value is: ${content.style.display}`);
+	if (content.style.display == "none" || content.style.display == "") {
+		content.style.display = "block";
+	} else {
+		content.style.display = "none";
+	}
+});
+// }
 
-collapseSection();
+// collapseSection();
 
 /*Call functions*/
 

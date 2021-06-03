@@ -246,11 +246,12 @@ section:nth-of-type(even) .landing__container
 	padding: 0 0rem;
 }
 
-.landing__container {
-	max-height: 0;
-	overflow: hidden;
-	transition: max-height 0.2s ease-out;
+.collapsible__wrapper {
+	display: none;
+	transition: display 0.5s ease-out;
 }
+
+
 
 /*********/
 
