@@ -62,8 +62,8 @@ function isInViewport(elem) {
 	console.log(`isInViewport called for ${elem.id}`);
 	let bounding = elem.getBoundingClientRect();
 	return (
-		bounding.top +150 >=0 &&
-		bounding.left +150 >= 0 &&
+		bounding.top +100 >=0 &&
+		bounding.left +100 >= 0 &&
 		bounding.right <= (window.innerWidth || document.documentElement.clientWidth) &&
 		bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight)
 		);
@@ -228,25 +228,33 @@ function burgerMenu() {
 
 
 // function to make section collapsible
-// function collapseSection() {
-console.log("collapseSection called");
-const collapse1 = document.querySelector('.collapsible');
-collapse1.addEventListener('click', () => {
-	console.log("click event on collapsible");
-	collapse1.classList.toggle('collapsible--active');
-	collapse1.classList.toggle('collaps--passive');
+function collapseSection() {
+	console.log("collapseSection called");
+	const collapseList = document.querySelectorAll('.collapsible');
+	collapseList.forEach((collapse) => {
+		collapse.addEventListener('click', () => {
+			console.log("click event on collapsible");
+			collapse.classList.toggle('collapsible--active');
+			collapse.classList.toggle('collaps--passive');
 
-	const content = collapse1.nextElementSibling;
-	console.log(`display value is: ${content.style.display}`);
-	if (content.style.display == "none" || content.style.display == "") {
-		content.style.display = "block";
-	} else {
-		content.style.display = "none";
-	}
-});
-// }
+			const sibContent = collapse.nextElementSibling;
+			console.log(`display value is: ${sibContent.style.display}`);
+			// if (content.style.minHeight) {
+			// 	content.style.minHeight = null;
+			// } else {
+			// 	content.style.minHeight = 70 + "vh";
+			// }
+			if (sibContent.style.display == "none" || sibContent.style.display == "") {
+				sibContent.style.display = "block";
+			} else {
+				sibContent.style.display = "none";
+			}
+		});
+	})
 
-// collapseSection();
+}
+
+collapseSection();
 
 /*Call functions*/
 
