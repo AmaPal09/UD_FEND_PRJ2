@@ -216,7 +216,43 @@ section:nth-of-type(even) .landing__container
 	order: 2;
 }
 
+/*********/
+/*Collapsible sections*/
+.collapsible {
+	/*background-color: rgb(255, 102, 51, 0.2);*/
+	cursor: pointer;
+}
 
+.collaps--passive {
+	background-color: rgb(255, 102, 51, 0.2);
+}
+
+.collaps--passive::after {
+	content: '+';
+	font-size: 1.5rem;
+	float: right;
+	padding: 0 1rem;
+}
+
+.collapsible--active {
+	background-color: none;
+	cursor: pointer;
+}
+
+.collapsible--active::after {
+	content: '-';
+	font-size: 2rem;
+	float: right;
+	padding: 0 0rem;
+}
+
+.landing__container {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+}
+
+/*********/
 
 /*Responsive layout
 
