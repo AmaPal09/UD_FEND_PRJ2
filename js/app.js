@@ -26,6 +26,9 @@ const sectionsList = document.querySelectorAll('section');
 //get parent element where the menu list will be added
 const navbarParent = document.querySelector('#navbar__list');
 
+// Flag for checking the collapsed sections. Initially all sections collapsed
+let collapseFlag = true;
+
 /**
  * End Global Variables
  * Start Helper Functions
@@ -246,8 +249,12 @@ function collapseSection() {
 			// }
 			if (sibContent.style.display == "none" || sibContent.style.display == "") {
 				sibContent.style.display = "block";
+				sibContent.style.cssText = sibContent.style.cssText.concat("min-Height: 80vh");
+				collapseFlag = true;
 			} else {
-				sibContent.style.display = "none";
+				sibContent.style.cssText = "display: none;"
+				collapseFlag = true;
+				// sibContent.style.display = "none";
 			}
 		});
 	})

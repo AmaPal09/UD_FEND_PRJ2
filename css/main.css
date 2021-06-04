@@ -115,6 +115,7 @@ section {
 	position: relative;
 	/*min-height: 80vh;*/
 	/*minHeight: 0;*/
+	/*min-height: 0;*/
 	display: none;
 	margin: 0 0 4rem 0;
 }
@@ -201,8 +202,8 @@ section {
 
 /*Thematic lay*/
 .landing__container {
-	/*padding: 3rem 1rem 1rem 1rem;*/
-	padding: 1rem;
+	padding: 3rem 1rem 1rem 1rem;
+	/*padding: 1rem;*/
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-gap: 20px;
