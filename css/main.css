@@ -114,6 +114,7 @@ main {
 section {
 	position: relative;
 	min-height: 80vh;
+	margin: 0 0 5rem 0;
 }
 
 /* Layout page header */
