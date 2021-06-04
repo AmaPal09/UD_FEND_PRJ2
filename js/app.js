@@ -44,7 +44,7 @@ function getCorrespondingSection(menu) {
 	const sectionId = menu.getAttribute('href').substring(1);
 	console.log(`getCorrespondingSection called for ${sectionId}`);
 	return document.getElementById(sectionId);
-};
+}
 
 
 /*
@@ -64,7 +64,7 @@ function getCorrespondingMenu(section) {
 	};
 
 	return undefined;
-};
+}
 
 
 /*
@@ -81,7 +81,7 @@ function isInViewport(elem) {
 		bounding.right <= (window.innerWidth || document.documentElement.clientWidth) &&
 		bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight)
 		);
-};
+}
 
 
 
@@ -125,7 +125,7 @@ function addNavItems() {
 	//add the navigation fragment to the navigation parent
 	navbarParent.appendChild(navFragment);
 
-};
+}
 
 
 /*
@@ -147,7 +147,7 @@ function createToTopButton() {
 	//add button to the webpage
 	document.body.appendChild(topButton);
 
-};
+}
 
 
 /**
@@ -179,7 +179,7 @@ function navToSectionScroll() {
 			menuCorrSect.scrollIntoView({behavior: "smooth"});
 		});
 	});
-};
+}
 
 
 /*
@@ -215,7 +215,7 @@ function activeSection() {
    			}
 		});
 	});
-};
+}
 
 
 /*
@@ -236,7 +236,7 @@ function displayToTopButton() {
 			toTopBtn.style.display = "none";
 		}
 	});
-};
+}
 
 
 /*
@@ -252,7 +252,7 @@ function clickToTopButton() {
 		document.body.scrollTop = 0; //For safari
 		document.documentElement.scrollTop = 0; //For chrome, firefox, ie, opera, etc.
 	});
-};
+}
 
 
 /*
@@ -268,7 +268,7 @@ function burgerMenu() {
 	burger.addEventListener('click', () => {
 		navbarParent.classList.toggle('navbar__list--active');
 	});
-};
+}
 
 
 
