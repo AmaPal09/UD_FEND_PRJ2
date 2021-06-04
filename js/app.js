@@ -26,13 +26,20 @@ const sectionsList = document.querySelectorAll('section');
 //get parent element where the menu list will be added
 const navbarParent = document.querySelector('#navbar__list');
 
+
+
 /**
  * End Global Variables
  * Start Helper Functions
  *
 */
 
-//Get the section corresponding to the input menu item
+
+/*
+* @description: get the section for given menu item
+* @param {document element} menu - Nav bar menu item
+* @return {document element} section - section of the html page
+*/
 function getCorrespondingSection(menu) {
 	const sectionId = menu.getAttribute('href').substring(1);
 	console.log(`getCorrespondingSection called for ${sectionId}`);
@@ -40,7 +47,11 @@ function getCorrespondingSection(menu) {
 };
 
 
-// Get the menu item corresponding to the input section
+/*
+* @description: get the nav menu item for give document section
+* @param {document element} section - section of html page
+* @return {document element} menu - Nav bar menu item
+*/
 function getCorrespondingMenu(section) {
 	// get all menu items to cross check which one correspnds to section
 	const menuLinksList = document.querySelectorAll('.menu__link');
@@ -56,8 +67,11 @@ function getCorrespondingMenu(section) {
 };
 
 
-
-// fuction  to check if element is in viewport
+/*
+* @description: check if document element is in viewport or not
+* @param {document element} elem - section of html page
+* @return {bollean} true/false - is or is not in viewport
+*/
 function isInViewport(elem) {
 	console.log(`isInViewport called for ${elem.id}`);
 	let bounding = elem.getBoundingClientRect();
@@ -70,13 +84,19 @@ function isInViewport(elem) {
 };
 
 
+
 /**
  * End Helper Functions
  * Begin Main Functions
  *
 */
 
-// Function to create navigation menu list
+
+/*
+* @description: Populate nav bar dynamically with menu items
+* @param {}
+* @return {}
+*/
 function addNavItems() {
 	console.log("addNavItems started")
 	const navFragment = document.createDocumentFragment();
@@ -108,7 +128,11 @@ function addNavItems() {
 };
 
 
-// Function that will create a floating to jump to top button
+/*
+* @description: Create a button to scroll to the top of the screen
+* @param {}
+* @return {}
+*/
 function createToTopButton() {
 	//create new buttom element
 	const topButton = document.createElement('button');
@@ -132,7 +156,12 @@ function createToTopButton() {
  *
 */
 
-//function for click events listener to scroll to section
+
+/*
+* @description: add scrolling event listeners to nav bar menu items so that when clicked on, they scroll to corresponding section
+* @param {}
+* @return {}
+*/
 function navToSectionScroll() {
 	// get all menu list items
 	const menuLinksList = document.querySelectorAll('.menu__link');
@@ -153,7 +182,11 @@ function navToSectionScroll() {
 };
 
 
-// function to add scroll event listener to highlight corresponding menu item
+/*
+* @description: Add scroll event listeners which will highlight the section in viewport and its corresponding menu item
+* @param {}
+* @return {}
+*/
 function activeSection() {
 	console.log("Active sections called");
 
@@ -185,7 +218,11 @@ function activeSection() {
 };
 
 
-// function to add events that will display to top button
+/*
+* @description: Add scroll event on the to Top button so that it is displayed when user scrolls away from the top of the page
+* @param {}
+* @return {}
+*/
 function displayToTopButton() {
 	console.log("Hello World");
 	// get the button element
@@ -202,7 +239,11 @@ function displayToTopButton() {
 };
 
 
-//function to add event listener that will jump to top when clicked on button
+/*
+* @description: Add click event listener on the to top button so that user jumps to the top of the page on clicking it
+* @param {}
+* @return {}
+*/
 function clickToTopButton() {
 	// get the button element
 	const toTopBtn = document.getElementById('toTopBtn');
@@ -214,7 +255,12 @@ function clickToTopButton() {
 };
 
 
-//hamburger menu on when screen size is small/medium
+/*
+* @description: Add toggle feature to the burger navbar displayed on
+small screens
+* @param {}
+* @return {}
+*/
 function burgerMenu() {
 	const burger = document.querySelector('.hamburger');
 
@@ -225,7 +271,12 @@ function burgerMenu() {
 };
 
 
-/*Call functions*/
+
+/**
+ * End Event Functions
+ * Begin Function Calls
+ *
+*/
 
 // Build menu
 addNavItems();
@@ -247,3 +298,8 @@ activeSection();
 
 // burger menu toggle function
 burgerMenu();
+
+/**
+ * End Function Calls
+ *
+*/
