@@ -13,19 +13,17 @@
  *
 */
 
-console.log("File is attached");
+// console.log("File is attached");
 
 /**
  * Define Global Variables
  *
 */
-
 // Get all the sections in the main body
 const sectionsList = document.querySelectorAll('section');
 
 //get parent element where the menu list will be added
 const navbarParent = document.querySelector('#navbar__list');
-
 
 
 /**
@@ -34,7 +32,6 @@ const navbarParent = document.querySelector('#navbar__list');
  *
 */
 
-
 /*
 * @description: get the section for given menu item
 * @param {document element} menu - Nav bar menu item
@@ -42,7 +39,7 @@ const navbarParent = document.querySelector('#navbar__list');
 */
 function getCorrespondingSection(menu) {
 	const sectionId = menu.getAttribute('href').substring(1);
-	console.log(`getCorrespondingSection called for ${sectionId}`);
+	// console.log(`getCorrespondingSection called for ${sectionId}`);
 	return document.getElementById(sectionId);
 }
 
@@ -62,7 +59,6 @@ function getCorrespondingMenu(section) {
 			return menu;
 		}
 	};
-
 	return undefined;
 }
 
@@ -73,7 +69,7 @@ function getCorrespondingMenu(section) {
 * @return {bollean} true/false - is or is not in viewport
 */
 function isInViewport(elem) {
-	console.log(`isInViewport called for ${elem.id}`);
+	// console.log(`isInViewport called for ${elem.id}`);
 	let bounding = elem.getBoundingClientRect();
 	return (
 		bounding.top +150 >=0 &&
@@ -84,13 +80,11 @@ function isInViewport(elem) {
 }
 
 
-
 /**
  * End Helper Functions
  * Begin Main Functions
  *
 */
-
 
 /*
 * @description: Populate nav bar dynamically with menu items
@@ -98,12 +92,11 @@ function isInViewport(elem) {
 * @return {}
 */
 function addNavItems() {
-	console.log("addNavItems started")
+	// console.log("addNavItems started")
 	const navFragment = document.createDocumentFragment();
 
 	// create a navbar menu item for each section in the index
 	sectionsList.forEach((sectElement) => {
-
 		// create a list item
 		const navListItem = document.createElement('li');
 		//create an anchor element to be added to the list item
@@ -116,15 +109,12 @@ function addNavItems() {
 
 		//add menuLink to the list item
 		navListItem.appendChild(menuLink);
-
 		//add nav item to the document fragment
 		navFragment.appendChild(navListItem);
-
 	});
 
 	//add the navigation fragment to the navigation parent
 	navbarParent.appendChild(navFragment);
-
 }
 
 
@@ -136,6 +126,7 @@ function addNavItems() {
 function createToTopButton() {
 	//create new buttom element
 	const topButton = document.createElement('button');
+
 	// add attributes to the button
 	topButton.id = 'toTopBtn';
 	topButton.title = 'Go to top of webpage';
@@ -146,8 +137,8 @@ function createToTopButton() {
 
 	//add button to the webpage
 	document.body.appendChild(topButton);
-
 }
+
 
 
 /**
@@ -155,7 +146,6 @@ function createToTopButton() {
  * Begin Events
  *
 */
-
 
 /*
 * @description: add scrolling event listeners to nav bar menu items so that when clicked on, they scroll to corresponding section
@@ -174,7 +164,7 @@ function navToSectionScroll() {
 		menu.addEventListener('click', (event) => {
 			// stop from jumping to the section
 			event.preventDefault();
-			console.log(`click event on ${menu.innerText}`);
+			// console.log(`click event on ${menu.innerText}`);
 			// scroll smoothly to the section
 			menuCorrSect.scrollIntoView({behavior: "smooth"});
 		});
@@ -188,12 +178,10 @@ function navToSectionScroll() {
 * @return {}
 */
 function activeSection() {
-	console.log("Active sections called");
-
+	// console.log("Active sections called");
 	// add scroll event listener
 	window.addEventListener('scroll', () => {
-		console.log("scroll event");
-
+		// console.log("scroll event");
 		// check which section is active
 		sectionsList.forEach((section) => {
 			//get menuItem correspoding to this section
@@ -201,8 +189,7 @@ function activeSection() {
 
 			// execute if the section is in viewport
 			if(isInViewport(section)) {
-				console.log(`section ${section.id} is in viewport`);
-
+				// console.log(`section ${section.id} is in viewport`);
 				// add active classes to the navigation menu item
 				menuItem.classList.add('menu__link--active');
 				// add active classes to the section
@@ -224,12 +211,12 @@ function activeSection() {
 * @return {}
 */
 function displayToTopButton() {
-	console.log("Hello World");
+	// console.log("Hello World");
 	// get the button element
 	const toTopBtn = document.getElementById('toTopBtn');
 	// add event listener to display button when scrolling
 	window.addEventListener('scroll', () => {
-		console.log("adding scroll event");
+		// console.log("adding scroll event");
 		if(document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
 			toTopBtn.style.display = "block";
 		} else {
