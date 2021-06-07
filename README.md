@@ -22,7 +22,7 @@ You can check the live project [here](https://amapal09.github.io/UD_FEND_PRJ2/).
 
 ## Code Examples
 app.js in the JS folder contains the js script created for this landing page.
-Below listed are few of the important features created as a part of this project and listed with them are the js and DOM concepts learned and implemented for the proper working of these features
+Below listed are few of the important features created as a part of this project and listed with them are the js and DOM concepts learned and implemented for the proper working of these features.
 
 - **Dynamic Navigation Bar construnction**
 `function addNavItems()` contains the code for creating the menu items in the navigation bar on page loads.
@@ -34,8 +34,16 @@ Below listed are few of the important features created as a part of this project
 	- Element.appendChild()
 
 - **Section Active State**
+<<<<<<< HEAD
 `function activeSection()` & ` function isInViewport()` contain the code that highlights the section that is currently visible to the use and highlights the navigation bar menu item corresponding that section.
  __Important concepts used in activeSection__
+||||||| f345ce1
+`function activeSection()` & ` function isInViewport()` contain the code that highlights the section that is currently visible to the use and highlights the navigation bar menu item corresponding that section
+__Important concepts used in activeSection__
+=======
+`function activeSection()` & ` function isInViewport()` contain the code that highlights the section that is currently visible to the use and highlights the navigation bar menu item corresponding that section. 
+ __Important concepts used in activeSection__
+>>>>>>> 225af2e75c1c59b0cef6cee4a444c1aa051ec941
 	- window.addEventListener
 	- scroll event
  __Important concepts used in isInViewport__
@@ -73,5 +81,13 @@ JS code `function burgerMenu()` handles its behavior.
 ## Good to have features for future enhancements
 - [x] Add an active state to the navigation items when a section is in the viewport
 - [x] Add a scroll to top button on the page that’s only visible when the user scrolls away from the top of the screen
+<<<<<<< HEAD
 - Hide fixed navigation bar while not scrolling (it should still be present on page load).
 - Make sections collapsible.
+||||||| f345ce1
+- [] Hide fixed navigation bar while not scrolling (it should still be present on page load).
+- [] Make sections collapsible.
+=======
+- [] Hide fixed navigation bar while not scrolling (it should still be present on page load).
+- [] Make sections collapsible.
+>>>>>>> 225af2e75c1c59b0cef6cee4a444c1aa051ec941
