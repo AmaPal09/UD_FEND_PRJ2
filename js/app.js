@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	 * Define Global Variables
 	 *
 	*/
-	const t0 = performance.now();
+	// const t0 = performance.now();
 	// Get all the sections in the main body
 	const sectionsList = document.querySelectorAll('section');
 
@@ -292,6 +292,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	 * End Function Calls
 	 *
 	*/
-	const t1 = performance.now();
-	console.log(`Code took ${t1-t0} miliseconds`);
+	// const t1 = performance.now();
+	// console.log(`Code took ${t1-t0} miliseconds`);
 });
