@@ -26,7 +26,7 @@ Below listed are few of the important features created as a part of this project
 
 - **Dynamic Navigation Bar construnction**
 `function addNavItems()` contains the code for creating the menu items in the navigation bar on page loads.
-__Important concepts used in addNavItems()__
+ __Important concepts used in addNavItems()__
 	- createDocumentFragment()
 	- createElement()
 	- Element. attributes like href, innerText
@@ -34,18 +34,18 @@ __Important concepts used in addNavItems()__
 	- Element.appendChild()
 
 - **Section Active State**
-`function activeSection()` & ` function isInViewport()` contain the code that highlights the section that is currently visible to the use and highlights the navigation bar menu item corresponding that section
-__Important concepts used in activeSection__
+`function activeSection()` & ` function isInViewport()` contain the code that highlights the section that is currently visible to the use and highlights the navigation bar menu item corresponding that section.
+ __Important concepts used in activeSection__
 	- window.addEventListener
 	- scroll event
-__Important concepts used in isInViewport__
+ __Important concepts used in isInViewport__
 	- Element.getBoundingClientRect()
 	- window.innerHeight
 	- document.documentElement.clientHeight
 
 - **Scroll to Anchor**
 `function navToSectionScroll()` implements the code that scrolls to the corresponding section when a menu item in navigation bar is clicked on.
-__Important concepts used in navToSectionScroll__
+ __Important concepts used in navToSectionScroll__
 	- document.querySelectorAll()
 	- Element.addEventListener()
 	- click event
@@ -53,8 +53,8 @@ __Important concepts used in navToSectionScroll__
 	- Element.scrollIntoView()
 
 - **Scroll to top button**
-`function createToTopButton()`, `unction displayToTopButton()` and `function clickToTopButton()` together create a button on page loading that is displayed only when user scrolls away from the top of the page and on clicking on it, takes the user to the top of the page
-__Important concepts used__
+`function createToTopButton()`, `unction displayToTopButton()` and `function clickToTopButton()` together create a button on page loading that is displayed only when user scrolls away from the top of the page and on clicking on it, takes the user to the top of the page.
+ __Important concepts used__
 	- document.body.scrollTop
 	- document.documentElement.scrollTop
 	- getElementById()
@@ -67,11 +67,11 @@ CSS Media Queries are used to set breakpoints for 4 screen sizes. These are:
 	- regular/default view falls between 789px and 1199px
 The navigation menu items are placed under a burger menu icon for small and medium screens.
 JS code `function burgerMenu()` handles its behavior.
-__Important concept used__
+ __Important concept used__
 	- Element.classList.toggle()
 
 ## Good to have features for future enhancements
 - [x] Add an active state to the navigation items when a section is in the viewport
 - [x] Add a scroll to top button on the page that’s only visible when the user scrolls away from the top of the screen
-- [] Hide fixed navigation bar while not scrolling (it should still be present on page load).
-- [] Make sections collapsible.
+- Hide fixed navigation bar while not scrolling (it should still be present on page load).
+- Make sections collapsible.
