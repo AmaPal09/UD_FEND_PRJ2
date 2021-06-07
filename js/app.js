@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			if (menuHref == section.id) {
 				return menu;
 			}
-		};
+		}
 		return undefined;
 	}
 
