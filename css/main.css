@@ -114,8 +114,11 @@ footer {
 
 /*Layout main body*/
 main {
-	/*top | horizontal | bottom*/
-	margin: 10vh 1rem 10vh;
+	margin: 1rem 5vh 1rem 5vh;
+}
+
+footer {
+	margin: 1rem 5vh 1rem 5vh;
 }
 
 .main__hero {
@@ -136,7 +139,8 @@ main {
 section {
 	position: relative;
 	min-height: 80vh;
-	margin: 0 0 5rem 0;
+	margin: 0 0 2rem 0;
+	padding: 5.2rem 0 0 0;
 }
 
 .footer__social__connections {
@@ -249,6 +253,14 @@ section:nth-of-type(even) .landing__container
 		overflow-x: hidden;
 	}
 
+	main {
+		margin: 1rem 2vh 1rem 2vh;
+	}
+
+	footer {
+		margin: 1rem 2vh 1rem 2vh;
+	}
+
 	figure{
 		padding: 1rem 0 0 0;
 	}
@@ -315,6 +327,14 @@ section:nth-of-type(even) .landing__container
 		line-height: 1.4;
 	}
 
+	main {
+		margin: 1rem 1vh 1rem 1vh;
+	}
+
+	footer {
+		margin: 1rem 1vh 1rem 1vh;
+	}
+
 	.navbar__menu {
 		height: 8vh;
 	}
@@ -330,6 +350,14 @@ section:nth-of-type(even) .landing__container
 	*{
 		font-size: 20px;
 		line-height: 2;
+	}
+
+	main {
+		margin: 1rem 10vh 1rem 10vh;
+	}
+
+	footer {
+		margin: 1rem 10vh 1rem 10vh;
 	}
 
 	.landing__container {
