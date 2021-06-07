@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		const menuLinksList = document.querySelectorAll('.menu__link');
 
 		for(const menu of menuLinksList) {
-			menuHref = menu.getAttribute('href').substring(1);
+			const menuHref = menu.getAttribute('href').substring(1);
 			if (menuHref == section.id) {
 				return menu;
 			}
