@@ -15,7 +15,7 @@
 
 // console.log("File is attached");
 
-document.addEventListener('DOMContentLoaded', () =>) {
+document.addEventListener('DOMContentLoaded', () => {
 	/**
 	 * Define Global Variables
 	 *
@@ -294,4 +294,4 @@ document.addEventListener('DOMContentLoaded', () =>) {
 	*/
 	const t1 = performance.now();
 	console.log(`Code took ${t1-t0} miliseconds`);
-}
+});
