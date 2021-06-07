@@ -237,7 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		// get the button element
 		const toTopBtn = document.getElementById('toTopBtn');
 		// add event listener to check when button is clicked
-		toTopBtn.addEventListener('click', (event) => {
+		toTopBtn.addEventListener('click', () => {
 			document.body.scrollTop = 0; //For safari
 			document.documentElement.scrollTop = 0; //For chrome, firefox, ie, opera, etc.
 		});
