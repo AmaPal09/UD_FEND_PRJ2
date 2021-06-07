@@ -8,7 +8,6 @@
 * {
 	margin: 0;
 	padding: 0;
-	/*text-align: center;*/
 	font-family: "Roboto", sans-serif;
 	font-size: 16px;
 	font-weight: 300;
@@ -29,7 +28,6 @@ h1 {
 	font-weight: 700;
 	font-size: 3rem;
 	text-align: center;
-
 }
 
 .main__hero__desc {
@@ -57,7 +55,6 @@ p {
 /*Typography footer*/
 footer {
 	padding: 1rem;
-	/*text-align: center;*/
 }
 
 .copyright-statement {
@@ -78,16 +75,6 @@ footer {
 	background: #333;
     color: #fff;
     transition: ease 0.3s all;
-}
-
-.footer__social__connections {
-	display: flex;
-	flex-direction: row;
-	width: 75vw;
-	align-items: center;
-    justify-content: space-between;
-    padding: 1rem 0 2rem 0;
-
 }
 
 /*Typography of other features*/
@@ -137,12 +124,6 @@ main {
 	margin-top: 10rem;
 }
 
-section {
-	position: relative;
-	min-height: 80vh;
-	margin: 0 0 5rem 0;
-}
-
 /* Layout page header */
 .page__header {
 	position: fixed;
@@ -150,6 +131,21 @@ section {
 	width: 100%;
 	background-color: #fff;
 	z-index: 5;
+}
+
+section {
+	position: relative;
+	min-height: 80vh;
+	margin: 0 0 5rem 0;
+}
+
+.footer__social__connections {
+	display: flex;
+	flex-direction: row;
+	width: 75vw;
+	align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0 2rem 0;
 }
 
 
@@ -189,11 +185,6 @@ section {
     transition: ease 0.3s all;
 }
 
-/*.navbar__menu .menu__link .menu__link--active {
-    background-color: #f63;
-    color: white;
-}*/
-
 .hamburger {
 	font-size: 1.5rem;
 	color: #f63;
@@ -218,6 +209,7 @@ section {
 .section--active {
 	background-color: #eee;
 }
+
 
 /*Thematic lay*/
 .landing__container {
@@ -245,27 +237,8 @@ section:nth-of-type(even) .landing__container
 
 
 
-/*Responsive layout
-
-
-.landing container is not grid
-section img 300px
-small = under max-width:(iphoneX 375px)
-
-.landing__container is not grid
-section img 400px
-medium = under max-width: (ipad = 768px)
-
-.landing container is grid
-section img 400px
-large = under max-width(1200px)
-
-xl = over min-width(1200px)
-	section img 500px
-
-*/
-
-/*Changes for medium size screen*/
+/*Responsive layout*/
+/*Changes for medium screen size*/
 @media screen and (max-width: 768px){
 	* {
 		font-size: 16px;
@@ -280,13 +253,11 @@ xl = over min-width(1200px)
 		padding: 1rem 0 0 0;
 	}
 
-	/*#navbar__list {*/
 	.navbar__menu__list {
 		position: fixed;
 		right: 0px;
 		top: 8vh;
 		height: 92vh;
-		/*width: 100%;*/
 		width: 50%;
 		background-color: #fff;
 		display: flex;
@@ -300,7 +271,6 @@ xl = over min-width(1200px)
 	.navbar__menu .menu__link {
 		color: #f63;
 		font-size: 2rem;
-		/*opacity: 0;*/
 	}
 
 	.hamburger {
@@ -338,7 +308,7 @@ xl = over min-width(1200px)
 }
 
 
-/*Changes for medium size screen*/
+/*Changes for small screen size*/
 @media screen and (max-width: 376px){
 	* {
 		font-size: 14px;
@@ -352,15 +322,10 @@ xl = over min-width(1200px)
 	.section__landing__img {
 		width: 300px;
 	}
-
-
-
 }
 
 
-
-
-/*Changes for xl */
+/*Changes for xl screen size*/
 @media screen and (min-width: 1200px) {
 	*{
 		font-size: 20px;
