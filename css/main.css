@@ -57,13 +57,37 @@ p {
 /*Typography footer*/
 footer {
 	padding: 1rem;
-	text-align: center;
+	/*text-align: center;*/
 }
 
 .copyright-statement {
 	font-size: 0.8rem;
 	font-weight: 300;
 	text-align: inherit;
+}
+
+.fa{
+	color: #f63;
+	font-size: 3rem;
+	font-weight: bold;
+	padding: 1rem 2rem 1rem 0;
+	text-decoration: none;
+}
+
+.fa:hover{
+	background: #333;
+    color: #fff;
+    transition: ease 0.3s all;
+}
+
+.footer__social__connections {
+	display: flex;
+	flex-direction: row;
+	width: 75vw;
+	align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0 2rem 0;
+
 }
 
 /*Typography of other features*/
