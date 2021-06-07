@@ -57,11 +57,13 @@ p {
 /*Typography footer*/
 footer {
 	padding: 1rem;
+	text-align: center;
 }
 
 .copyright-statement {
 	font-size: 0.8rem;
 	font-weight: 300;
+	text-align: inherit;
 }
 
 /*Typography of other features*/
