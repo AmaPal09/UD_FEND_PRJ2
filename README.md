@@ -29,7 +29,6 @@ Below listed are few of the important features created as a part of this project
  __Important concepts used in addNavItems()__
 	- createDocumentFragment()
 	- createElement()
-	- Element. attributes like href, innerText
 	- Element.classList, and its methods add()
 	- Element.appendChild()
 
@@ -44,12 +43,8 @@ Below listed are few of the important features created as a part of this project
 	- document.documentElement.clientHeight
 
 - **Scroll to Anchor**
-`function navToSectionScroll()` implements the code that scrolls to the corresponding section when a menu item in navigation bar is clicked on.
- __Important concepts used in navToSectionScroll__
-	- document.querySelectorAll()
-	- Element.addEventListener()
-	- click event
-	- event.preventDefault()
+Implemented as part of `function addNavItems()` using event listener. It facilitates scrolling to the corresponding section when a menu item in navigation bar is clicked on.
+ __Important concepts used__
 	- Element.scrollIntoView()
 
 - **Scroll to top button**
