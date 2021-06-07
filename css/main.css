@@ -175,7 +175,7 @@ section {
 }
 
 .navbar__menu .menu__link {
-    display: block;
+    /*display: block;*/
     padding: 1rem;
     font-size: 1.5rem;
     font-weight: 700;
@@ -281,7 +281,7 @@ section:nth-of-type(even) .landing__container
 	}
 
 	.navbar__menu .menu__link {
-		color: #f63;
+		/*color: #f63;*/
 		font-size: 2rem;
 	}
 

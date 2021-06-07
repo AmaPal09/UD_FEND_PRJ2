@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	 * Define Global Variables
 	 *
 	*/
-	// const t0 = performance.now();
 	// Get all the sections in the main body
 	const sectionsList = document.querySelectorAll('section');
 
@@ -39,11 +38,11 @@ document.addEventListener('DOMContentLoaded', () => {
 	* @param {document element} menu - Nav bar menu item
 	* @return {document element} section - section of the html page
 	*/
-	function getCorrespondingSection(menu) {
-		const sectionId = menu.getAttribute('href').substring(1);
-		// console.log(`getCorrespondingSection called for ${sectionId}`);
-		return document.getElementById(sectionId);
-	}
+	// function getCorrespondingSection(menu) {
+	// 	const sectionId = menu.getAttribute('href').substring(1);
+	// 	// console.log(`getCorrespondingSection called for ${sectionId}`);
+	// 	return document.getElementById(sectionId);
+	// }
 
 
 	/*
@@ -56,10 +55,13 @@ document.addEventListener('DOMContentLoaded', () => {
 		const menuLinksList = document.querySelectorAll('.menu__link');
 
 		for(const menu of menuLinksList) {
-			const menuHref = menu.getAttribute('href').substring(1);
-			if (menuHref == section.id) {
+			if (menu.innerText == section.getAttribute('data-nav')) {
 				return menu;
 			}
+			// const menuHref = menu.getAttribute('href').substring(1);
+			// if (menuHref == section.id) {
+			// 	return menu;
+			// }
 		}
 		return undefined;
 	}
@@ -102,15 +104,20 @@ document.addEventListener('DOMContentLoaded', () => {
 			// create a list item
 			const navListItem = document.createElement('li');
 			//create an anchor element to be added to the list item
-			const menuLink = document.createElement('a');
+			navListItem.addEventListener('click', () => {
+				sectElement.scrollIntoView({behavior: "smooth"});
+			});
+			navListItem.innerText = sectElement.getAttribute('data-nav');
+			navListItem.classList.add('menu__link');
+			// const menuLink = document.createElement('a');
 
 			// add attributes and content to anchor link
-			menuLink.href = `#${sectElement.id}`
-			menuLink.innerText = sectElement.getAttribute('data-nav');
-			menuLink.classList.add('menu__link');
+			// menuLink.href = `#${sectElement.id}`
+			// menuLink.innerText = sectElement.getAttribute('data-nav');
+			// menuLink.classList.add('menu__link');
 
 			//add menuLink to the list item
-			navListItem.appendChild(menuLink);
+			// navListItem.appendChild(menuLink);
 			//add nav item to the document fragment
 			navFragment.appendChild(navListItem);
 		});
@@ -154,24 +161,24 @@ document.addEventListener('DOMContentLoaded', () => {
 	* @param {}
 	* @return {}
 	*/
-	function navToSectionScroll() {
-		// get all menu list items
-		const menuLinksList = document.querySelectorAll('.menu__link');
+	// function navToSectionScroll() {
+	// 	// get all menu list items
+	// 	const menuLinksList = document.querySelectorAll('.menu__link');
 
-		// add the events on each menu item
-		menuLinksList.forEach((menu) => {
-			// get the section to which the menu points
-			const menuCorrSect = getCorrespondingSection(menu);
-			// add click event listener
-			menu.addEventListener('click', (event) => {
-				// stop from jumping to the section
-				event.preventDefault();
-				// console.log(`click event on ${menu.innerText}`);
-				// scroll smoothly to the section
-				menuCorrSect.scrollIntoView({behavior: "smooth"});
-			});
-		});
-	}
+	// 	// add the events on each menu item
+	// 	menuLinksList.forEach((menu) => {
+	// 		// get the section to which the menu points
+	// 		const menuCorrSect = getCorrespondingSection(menu);
+	// 		// add click event listener
+	// 		menu.addEventListener('click', (event) => {
+	// 			// stop from jumping to the section
+	// 			event.preventDefault();
+	// 			// console.log(`click event on ${menu.innerText}`);
+	// 			// scroll smoothly to the section
+	// 			menuCorrSect.scrollIntoView({behavior: "smooth"});
+	// 		});
+	// 	});
+	// }
 
 
 	/*
@@ -280,7 +287,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	clickToTopButton();
 
 	// Scroll to section on link click
-	navToSectionScroll();
+	// navToSectionScroll();
 
 	// Set sections as active
 	activeSection();
@@ -292,6 +299,4 @@ document.addEventListener('DOMContentLoaded', () => {
 	 * End Function Calls
 	 *
 	*/
-	// const t1 = performance.now();
-	// console.log(`Code took ${t1-t0} miliseconds`);
 });
