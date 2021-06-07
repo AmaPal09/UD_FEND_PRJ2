@@ -201,7 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					// as section is not active remove active classes from navigation menu item and section
 					menuItem.classList.remove('menu__link--active');
 					section.classList.remove('section--active');
-	   			}
+				}
 			});
 		});
 	}
