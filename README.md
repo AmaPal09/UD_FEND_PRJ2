@@ -22,11 +22,11 @@ You can check the live project [here](https://amapal09.github.io/UD_FEND_PRJ2/).
 
 ## Code Examples
 app.js in the JS folder contains the js script created for this landing page.
-Below listed are few of the important features created as a part of this project and listed with them are the js and DOM concepts learned and implemented for the proper working of these features
+Below listed are few of the important features created as a part of this project and listed with them are the js and DOM concepts learned and implemented for the proper working of these features.
 
 - **Dynamic Navigation Bar construnction**
 `function addNavItems()` contains the code for creating the menu items in the navigation bar on page loads.
-__Important concepts used in addNavItems()__
+ __Important concepts used in addNavItems()__
 	- createDocumentFragment()
 	- createElement()
 	- Element. attributes like href, innerText
@@ -34,8 +34,8 @@ __Important concepts used in addNavItems()__
 	- Element.appendChild()
 
 - **Section Active State**
-`function activeSection()` & ` function isInViewport()` contain the code that highlights the section that is currently visible to the use and highlights the navigation bar menu item corresponding that section
-__Important concepts used in activeSection__
+`function activeSection()` & ` function isInViewport()` contain the code that highlights the section that is currently visible to the use and highlights the navigation bar menu item corresponding that section. 
+ __Important concepts used in activeSection__
 	- window.addEventListener
 	- scroll event
 __Important concepts used in isInViewport__
