@@ -329,6 +329,12 @@ section:nth-of-type(even) .landing__container
 		margin: 1rem 1vh 1rem 1vh;
 	}
 
+
+	section {
+		margin: 0 0 1rem 0;
+		padding: 3.7rem 0 0 0;
+	}
+
 	footer {
 		margin: 1rem 1vh 1rem 1vh;
 	}
@@ -352,6 +358,11 @@ section:nth-of-type(even) .landing__container
 
 	main {
 		margin: 1rem 10vh 1rem 10vh;
+	}
+
+	section {
+		margin: 0 0 1.5rem 0;
+		padding: 4.2rem 0 0 0;
 	}
 
 	footer {
