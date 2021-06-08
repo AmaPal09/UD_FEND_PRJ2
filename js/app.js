@@ -13,8 +13,6 @@
  *
 */
 
-// console.log("File is attached");
-
 document.addEventListener('DOMContentLoaded', () => {
 	/**
 	 * Define Global Variables
@@ -34,18 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	*/
 
 	/*
-	* @description: get the section for given menu item
-	* @param {document element} menu - Nav bar menu item
-	* @return {document element} section - section of the html page
-	*/
-	// function getCorrespondingSection(menu) {
-	// 	const sectionId = menu.getAttribute('href').substring(1);
-	// 	// console.log(`getCorrespondingSection called for ${sectionId}`);
-	// 	return document.getElementById(sectionId);
-	// }
-
-
-	/*
 	* @description: get the nav menu item for give document section
 	* @param {document element} section - section of html page
 	* @return {document element} menu - Nav bar menu item
@@ -58,10 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
 			if (menu.innerText == section.getAttribute('data-nav')) {
 				return menu;
 			}
-			// const menuHref = menu.getAttribute('href').substring(1);
-			// if (menuHref == section.id) {
-			// 	return menu;
-			// }
 		}
 		return undefined;
 	}
@@ -73,7 +55,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	* @return {bollean} true/false - is or is not in viewport
 	*/
 	function isInViewport(elem) {
-		// console.log(`isInViewport called for ${elem.id}`);
 		let bounding = elem.getBoundingClientRect();
 		return (
 			bounding.top +150 >=0 &&
@@ -96,29 +77,23 @@ document.addEventListener('DOMContentLoaded', () => {
 	* @return {}
 	*/
 	function addNavItems() {
-		// console.log("addNavItems started")
 		const navFragment = document.createDocumentFragment();
 
 		// create a navbar menu item for each section in the index
 		sectionsList.forEach((sectElement) => {
 			// create a list item
 			const navListItem = document.createElement('li');
-			//create an anchor element to be added to the list item
+
+			// add attributes and content to list item
+			navListItem.innerText = sectElement.getAttribute('data-nav');
+			navListItem.classList.add('menu__link');
+
+			//add click event listener to the item to scroll to corresponding section on click
 			navListItem.addEventListener('click', () => {
 				sectElement.scrollIntoView({behavior: "smooth"});
 			});
-			navListItem.innerText = sectElement.getAttribute('data-nav');
-			navListItem.classList.add('menu__link');
-			// const menuLink = document.createElement('a');
 
-			// add attributes and content to anchor link
-			// menuLink.href = `#${sectElement.id}`
-			// menuLink.innerText = sectElement.getAttribute('data-nav');
-			// menuLink.classList.add('menu__link');
-
-			//add menuLink to the list item
-			// navListItem.appendChild(menuLink);
-			//add nav item to the document fragment
+			//add nav list item to the document fragment
 			navFragment.appendChild(navListItem);
 		});
 
@@ -157,40 +132,13 @@ document.addEventListener('DOMContentLoaded', () => {
 	*/
 
 	/*
-	* @description: add scrolling event listeners to nav bar menu items so that when clicked on, they scroll to corresponding section
-	* @param {}
-	* @return {}
-	*/
-	// function navToSectionScroll() {
-	// 	// get all menu list items
-	// 	const menuLinksList = document.querySelectorAll('.menu__link');
-
-	// 	// add the events on each menu item
-	// 	menuLinksList.forEach((menu) => {
-	// 		// get the section to which the menu points
-	// 		const menuCorrSect = getCorrespondingSection(menu);
-	// 		// add click event listener
-	// 		menu.addEventListener('click', (event) => {
-	// 			// stop from jumping to the section
-	// 			event.preventDefault();
-	// 			// console.log(`click event on ${menu.innerText}`);
-	// 			// scroll smoothly to the section
-	// 			menuCorrSect.scrollIntoView({behavior: "smooth"});
-	// 		});
-	// 	});
-	// }
-
-
-	/*
 	* @description: Add scroll event listeners which will highlight the section in viewport and its corresponding menu item
 	* @param {}
 	* @return {}
 	*/
 	function activeSection() {
-		// console.log("Active sections called");
 		// add scroll event listener
 		window.addEventListener('scroll', () => {
-			// console.log("scroll event");
 			// check which section is active
 			sectionsList.forEach((section) => {
 				//get menuItem correspoding to this section
@@ -198,7 +146,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 				// execute if the section is in viewport
 				if(isInViewport(section)) {
-					// console.log(`section ${section.id} is in viewport`);
 					// add active classes to the navigation menu item
 					menuItem.classList.add('menu__link--active');
 					// add active classes to the section
@@ -220,12 +167,10 @@ document.addEventListener('DOMContentLoaded', () => {
 	* @return {}
 	*/
 	function displayToTopButton() {
-		// console.log("Hello World");
 		// get the button element
 		const toTopBtn = document.getElementById('toTopBtn');
 		// add event listener to display button when scrolling
 		window.addEventListener('scroll', () => {
-			// console.log("adding scroll event");
 			if(document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
 				toTopBtn.style.display = "block";
 			} else {
@@ -285,9 +230,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	//Add click event toTopButton
 	clickToTopButton();
-
-	// Scroll to section on link click
-	// navToSectionScroll();
 
 	// Set sections as active
 	activeSection();
