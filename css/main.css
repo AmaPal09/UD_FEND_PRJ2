@@ -12,7 +12,6 @@
 	font-size: 16px;
 	font-weight: 300;
 	line-height: 1.6;
-
 }
 
 
@@ -281,7 +280,6 @@ section:nth-of-type(even) .landing__container
 	}
 
 	.navbar__menu .menu__link {
-		/*color: #f63;*/
 		font-size: 2rem;
 	}
 
