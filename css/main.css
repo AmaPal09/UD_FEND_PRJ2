@@ -94,6 +94,7 @@ footer {
 }
 
 .btn-scrollTop {
+	opacity: 0.85;
 	display: none;
 	position: fixed;
     bottom: 2.5rem;
