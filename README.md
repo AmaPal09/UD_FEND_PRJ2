@@ -68,5 +68,5 @@ JS code `function burgerMenu()` handles its behavior.
 ## Good to have features for future enhancements
 - [x] Add an active state to the navigation items when a section is in the viewport
 - [x] Add a scroll to top button on the page that’s only visible when the user scrolls away from the top of the screen
-- Hide fixed navigation bar while not scrolling (it should still be present on page load).
-- Make sections collapsible.
+- [ ] Hide fixed navigation bar while not scrolling (it should still be present on page load).
+- [ ] Make sections collapsible.
